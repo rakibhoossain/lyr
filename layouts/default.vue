@@ -96,16 +96,16 @@ export default {
       drawer: false,
       fixed: false,
       items: [
-        {
-          icon: 'mdi-apps',
-          title: 'lyr',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        },
+        // {
+        //   icon: 'mdi-apps',
+        //   title: 'lyr',
+        //   to: '/'
+        // },
+        // {
+        //   icon: 'mdi-chart-bubble',
+        //   title: 'Inspire',
+        //   to: '/inspire'
+        // },
         {
           icon: 'mdi-video',
           title: 'videos',
