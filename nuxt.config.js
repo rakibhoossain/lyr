@@ -3,6 +3,7 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
+  mode: 'universal',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -38,7 +39,30 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
   ],
+  //Axios
+  axios:{
+    baseURL: 'https://sis-demo.com/lumen/public/api',
+  },
+  // Auth
+  auth: {
+    strategies: {
+      local: {
+        // token: {
+        //   required: false,
+        //   type: false
+        // },
+        endpoints: {
+            login: { url: '/login', method: 'post' },
+            register: { url: '/register', method: 'post' },
+            logout: { url: '/logout', method: 'post' },
+            user: { url: '/profile', method: 'get' }
+        }
+      }
+    }
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
