@@ -7,7 +7,15 @@
       fixed
       app
     >
-      <v-list>
+    <v-list>
+        <v-list-item v-if="$auth.loggedIn">
+          <v-list-item-action>
+              <v-icon>mdi-account-circle</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="$auth.user.name" />
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -22,6 +30,9 @@
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
+
+
+
       </v-list>
     </v-navigation-drawer>
     <v-app-bar

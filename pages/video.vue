@@ -1,6 +1,6 @@
 <template>
 <div>
-  <!-- <nuxt-link to="/inspire">Inspire</nuxt-link> -->
+  <!-- <nuxt-link to="/inspire">{{$auth.user.name}}</nuxt-link> -->
   <v-container
       class="mb-6"
     >
