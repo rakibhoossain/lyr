@@ -116,7 +116,7 @@ export default {
   methods: {
     async userLogin() {
       try {
-        let response = await this.$auth.loginWith('local', { data: this.login })
+        let response = await this.$auth.loginWith('laravelJWT', { data: this.login })
         this.$router.push('/video')
       } catch (err) {
         this.valid = false

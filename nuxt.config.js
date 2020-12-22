@@ -44,23 +44,22 @@ export default {
   ],
   //Axios
   axios:{
-    baseURL: 'https://sis-demo.com/lumen/public/api',
+    // baseURL: 'https://sis-demo.com/lumen/public/api',
   },
   // Auth
   auth: {
     strategies: {
-      local: {
-        // token: {
-        //   required: false,
-        //   type: false
-        // },
-        endpoints: {
-            login: { url: '/login', method: 'post' },
-            register: { url: '/register', method: 'post' },
-            logout: { url: '/logout', method: 'post' },
-            user: { url: '/profile', method: 'get' }
-        }
-      }
+        laravelJWT: {
+            provider: 'laravel/jwt',
+            url: 'https://sis-demo.com/lumen/public',
+            token: {
+              property: 'access_token',
+              maxAge: 60 * 60
+            },
+            refreshToken: {
+              maxAge: 20160 * 60
+            },
+        },
     }
   },
 
