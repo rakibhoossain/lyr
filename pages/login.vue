@@ -71,6 +71,7 @@
 
 <script>
 export default {
+    middleware: 'guest',
   data() {
     return {
         dialog: true,
