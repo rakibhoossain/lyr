@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-
+const BASE_URL = 'http://localhost:8008';
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -44,14 +44,14 @@ export default {
   ],
   //Axios
   axios:{
-    // baseURL: 'https://sis-demo.com/lumen/public/api',
+    // baseURL: BASE_URL+'/api',
   },
   // Auth
   auth: {
     strategies: {
         laravelJWT: {
             provider: 'laravel/jwt',
-            url: 'https://sis-demo.com/lumen/public',
+            url: BASE_URL,
             token: {
               property: 'access_token',
               maxAge: 60 * 60
