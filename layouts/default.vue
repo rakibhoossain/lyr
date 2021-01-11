@@ -119,8 +119,18 @@ export default {
         // },
         {
           icon: 'mdi-video',
-          title: 'videos',
+          title: 'Videos',
           to: '/video'
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'Todo',
+          to: '/todo'
+        },
+        {
+          icon: 'mdi-video-plus',
+          title: 'Video Upload',
+          to: '/upload-video'
         }
       ],
       miniVariant: false,
