@@ -6,7 +6,7 @@
     >
       <v-row>
         <v-col
-          v-for="n in 10"
+          v-for="n in 100"
           :key="n"
         >
           <vue-plyr>
@@ -19,6 +19,6 @@
 </template>
 <script>
 export default {
-    middleware: 'auth'
+    // middleware: 'auth'
 }
 </script>

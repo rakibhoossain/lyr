@@ -41,12 +41,12 @@
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
+        <v-btn
+            icon
+            @click.stop="miniVariant = !miniVariant"
+        >
+            <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
+        </v-btn>
       <v-btn
         icon
         @click.stop="clipped = !clipped"
@@ -61,19 +61,25 @@
       </v-btn>
       <v-toolbar-title v-text="title" />
       <v-spacer />
+
+
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
+
+
+
     </v-app-bar>
     <v-main>
       <v-container>
         <nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer
+
+    <!-- <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
       temporary
@@ -89,7 +95,9 @@
           <v-list-item-title>Switch drawer (click me)</v-list-item-title>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
+
+
     <v-footer
       :absolute="!fixed"
       app
@@ -120,7 +128,19 @@ export default {
         {
           icon: 'mdi-video',
           title: 'Videos',
-          to: '/video'
+          to: '/video',
+          children: [
+                {
+                    icon: 'mdi-apps',
+                    title: 'Todo',
+                    to: '/todo'
+                },
+                {
+                    icon: 'mdi-video-plus',
+                    title: 'Video Upload',
+                    to: '/upload-video'
+                },
+            ]
         },
         {
           icon: 'mdi-apps',
