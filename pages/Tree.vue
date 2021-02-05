@@ -34,7 +34,31 @@ export default {
                 {
                     icon: 'mdi-apps',
                     title: 'Todo',
+                    to: '/todo',
+                    children: [
+                {
+                    icon: 'mdi-apps',
+                    title: 'Todo',
                     to: '/todo'
+                },
+                {
+                    icon: 'mdi-video-plus',
+                    title: 'Video Upload',
+                    to: '/upload-video',
+                    children: [
+                {
+                    icon: 'mdi-apps',
+                    title: 'Todo',
+                    to: '/todo'
+                },
+                {
+                    icon: 'mdi-video-plus',
+                    title: 'Video Upload',
+                    to: '/upload-video'
+                },
+            ]
+                },
+            ]
                 },
                 {
                     icon: 'mdi-video-plus',

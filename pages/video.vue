@@ -10,7 +10,9 @@
           :key="n"
         >
           <vue-plyr>
-            <div data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div>
+            <div class="plyr__video-embed">
+                <iframe src="https://player.vimeo.com/video/352286947?title=0&portrait=0&byline=0&autoplay=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+            </div>
           </vue-plyr>
         </v-col>
       </v-row>

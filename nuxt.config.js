@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-const BASE_URL = 'http://localhost:8008';
+const BASE_URL = 'http://localhost:8006';
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -25,7 +25,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '~/plugins/vue-plyr.js'
+    '~/plugins/vue-plyr.js',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
